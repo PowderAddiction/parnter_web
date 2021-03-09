@@ -1,0 +1,120 @@
+.detail {
+  .title {
+    font-size: 40rpx;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .detail-content {
+    padding: 20rpx;
+    background-color: white;
+    border-radius: 40rpx;
+    margin-bottom: 40rpx;
+
+    .desc-item {
+      display: flex;
+      padding: 10rpx 0;
+    }
+
+    .sits {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .sit-detail {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #555555;
+        width: 100%;
+        font-size: 24rpx;
+
+        .phone-num {
+          color: #45B7FF;
+          border: 1px solid #45B7FF;
+          border-radius: 4rpx;
+          padding: 0 4rpx;
+        }
+      }
+      .sit-item {
+        background-color: #fafafa;
+        background-image: url("../../../src/static/images/icon/user.png");
+        background-size: cover;
+        width: 60rpx;
+        height: 60rpx;
+        flex-shrink: 0;
+        margin: 20rpx;
+        border-radius: 8rpx;
+      }
+
+      .sit-empty {
+        background-color: #eee;
+        background-image: none;
+      }
+    }
+  }
+
+  .op-group {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: space-around;
+
+    .contact {
+      width: 90vw;
+      height: 100rpx;
+      margin-top: 20rpx;
+    }
+
+    .join-wrap {
+      margin: 20rpx 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-top: 1rpx solid $uni-color-primary;
+      border-bottom: 1rpx solid $uni-color-primary;
+      line-height: 100rpx;
+
+      input {
+        flex: 1;
+        line-height: 100rpx;
+        padding: 0 20rpx;
+      }
+
+      .join {
+        background-color: $uni-color-primary;
+        color: white;
+        display: flex;
+        width: 30vw;
+        text-align: center;
+        border-radius: 0;
+        border: none;
+      }
+    }
+
+    .contact {
+      color: $uni-color-primary;
+      background-color: white;
+      border: 1px solid $uni-color-primary;
+    }
+  }
+
+  .cancel {
+    width: 90vw;
+    height: 100rpx;
+    margin-top: 20rpx;
+    color: white;
+    background-color: $uni-color-primary;
+    border: 1px solid $uni-color-primary;
+  }
+
+  .get-info-btn, .go-pub {
+    width: 90vw;
+    height: 100rpx;
+    margin-top: 20rpx;
+    color: white;
+    background-color: $uni-color-primary;
+    border: 1px solid $uni-color-primary;
+  }
+}

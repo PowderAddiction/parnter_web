@@ -1,0 +1,23 @@
+.err {
+    width: 320rpx;
+    margin: 0 auto;
+  
+    .img {
+      width: 320rpx;
+      height: 240rpx;
+      display: block;
+      margin: 140rpx auto 0;
+    }
+  
+    .des, .refresh {
+      text-align: center;
+      font-size: 28rpx;
+      font-weight: 400;
+      color: rgba(0, 0, 0, .38);
+      line-height: 76rpx;
+    }
+    .refresh {
+      color: #45B7FF;
+    }
+  }
+  
