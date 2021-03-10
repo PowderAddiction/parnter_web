@@ -12,6 +12,7 @@
      <image
           :src="skiDetail.wechatGroupUrl"
           class="icon-img"
+          show-menu-by-longpress="true"
           />
     <view class="detail-rules" >
       <view class="item" v-for="it in skiDetail.rules" :key="it">

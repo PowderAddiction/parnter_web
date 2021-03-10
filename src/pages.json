@@ -52,7 +52,7 @@
         "selectedIconPath": "static/images/tabbar/skiings.png"
       },
       {
-        "text": "行程",
+        "text": "共享经济",
         "pagePath": "pages/travel/index",
         "iconPath": "static/images/tabbar/add.png",
         "selectedIconPath": "static/images/tabbar/add_selected.png"
