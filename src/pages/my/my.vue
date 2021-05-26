@@ -85,6 +85,12 @@
           </view>
         </view>
       </view>
+      <view class="er_code">
+        <image src="/static/images/other/qrCode.png" class="er_code_img"/>
+        <view class="desc">
+          滑遍全球，吃遍全球<br/>Go Skiing Go Living Go Exploring
+        </view>
+    </view>
     </view>
   </view>
 </template>
@@ -112,4 +118,26 @@ export default {
 
 <style lang="scss">
 @import "./my.scss";
+.er_code {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 16px;
+  padding: 20px;
+  border-radius: 8px;
+  .er_code_img {
+    width: 500rpx;
+    height: 500rpx;
+  }
+  .desc {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 15px;
+    line-height: 22px;
+    color: #777;
+  }
+}
 </style>

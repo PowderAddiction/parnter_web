@@ -23,21 +23,39 @@ export default {
       skiList: []
     };
   },
+  props: {
+    currentTab: {
+      type: Object
+    }
+  },
+  watch: {
+    currentTab(){
+      this.initList();
+    }
+  },
   onShow() {
     // this.initList();
+    
   },
   onLoad(params) {
-    this.initList();
+
+    // this.initList();
+  },
+  mounted(){
+
+     this.initList();
   },
   onHide() {},
   onShareAppMessage(res) {},
   methods: {
     initList(){
       fetchCategory({
-        menuId: 2
+        menuId: this.currentTab.id
       },(res)=>{
+
         this.skiList = res.data?.data
       },(res)=>{
+
       })
     },
     goDetail(id) {
@@ -56,6 +74,7 @@ export default {
     height: 159px;
     border-radius: 20px;
     font-size: 16px;
+    font-weight: 700;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.2);
     margin-bottom: 17px;
@@ -63,7 +82,6 @@ export default {
     align-items: center;
     justify-content: center;
     background-size: 100%;
-    font-weight: 700;
   }
 }
 </style>

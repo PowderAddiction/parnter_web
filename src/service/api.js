@@ -35,8 +35,12 @@ export const apiPath = {
     inviteMatchList: '/api/task/invite/list',
     inviteUser: '/api/task/invite',
     fetchCategory: '/api/v1/bk/fetch/category/id',
-    fetchDetail: '/api/v1/bk/fetch/category/detail'
-
+    fetchDetail: '/api/v1/bk/fetch/category/detail',
+    getUserInfo: '/api/user/get',
+    loginBySendCode: '/api/user/login_by_sms_code',
+    sendCode: '/api/user/send_login_sms_code',
+    configFetch: "/api/v1/config/fetch",
+    fetchMenus: "/api/v1/bk/fetch/menus"                                                                                                                                                                                                                                                     
 }
 
 export const getUrl = (path) => {

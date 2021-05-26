@@ -118,6 +118,22 @@ const requestWithAuth = async (params) => {
     })
 }
 
+
+const requestWithPhone = async (params) => {
+    if (!token) {
+        const _token = uni.getStorageSync("phoneToken");
+        if (_token) {
+            token = _token;
+        }
+    }
+    return request({
+        ...params,
+        data: {
+            ...params.data,
+        },
+        url: params.url + (params.url.match(/\?/) ? `&token=${token}` : `?token=${token}`)
+    })
+}
 /**
  * 获取用户 ID
  */
@@ -290,4 +306,49 @@ export const fetchDetail = (data, success, fail) => {
         fail
     })
 }
+export const fetchMenus = (data, success, fail) => {
+    return request({
+        method: 'GET',
+        url: getUrl(apiPath.fetchMenus),
+        data,
+        success,
+        fail
+    })
+}
 
+export const configFetch = (data, success, fail) => {
+    return request({
+        method: 'GET',
+        url: getUrl(apiPath.configFetch),
+        data,
+        success,
+        fail
+    })
+}
+export const fetchUserInfo = (data, success, fail) => {
+    return requestWithPhone({
+        method: 'GET',
+        url: getUrl(apiPath.getUserInfo),
+        data,
+        success,
+        fail
+    })
+}
+export const sendCode = (data, success, fail) => {
+    return requestWithPhone({
+        method: 'POST',
+        url: getUrl(apiPath.sendCode),
+        data,
+        success,
+        fail
+    })
+}
+export const sendCodeByCode = (data, success, fail) => {
+    return requestWithPhone({
+        method: 'POST',
+        url: getUrl(apiPath.loginBySendCode),
+        data,
+        success,
+        fail
+    })
+}
